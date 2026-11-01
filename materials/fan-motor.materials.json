@@ -1,0 +1,49 @@
+{
+  "schema": "hvaclab-materials-1",
+  "component": "@hvaclab/fan-motor",
+  "synthetic": true,
+  "note": "Synthetic example data, not engineering data.",
+  "totalMassKg": 1.1,
+  "materials": [
+    {
+      "part": "Housing",
+      "name": "Steel, pressed",
+      "standardGrade": "EN 10130 DC01",
+      "densityKgPerM3": 7850,
+      "massFraction": 0.35,
+      "notes": ""
+    },
+    {
+      "part": "Stator windings",
+      "name": "Copper, enamelled wire",
+      "standardGrade": "IEC 60317-13",
+      "densityKgPerM3": 8960,
+      "massFraction": 0.18,
+      "notes": ""
+    },
+    {
+      "part": "Laminations",
+      "name": "Electrical steel",
+      "standardGrade": "EN 10106 M600-50A",
+      "densityKgPerM3": 7650,
+      "massFraction": 0.3,
+      "notes": ""
+    },
+    {
+      "part": "Rotor magnet",
+      "name": "Bonded ferrite",
+      "standardGrade": "-",
+      "densityKgPerM3": 4900,
+      "massFraction": 0.12,
+      "notes": ""
+    },
+    {
+      "part": "Driver board",
+      "name": "PCB FR-4 with components",
+      "standardGrade": "IPC-4101/21",
+      "densityKgPerM3": 1850,
+      "massFraction": 0.05,
+      "notes": "Built-in inverter driver"
+    }
+  ]
+}

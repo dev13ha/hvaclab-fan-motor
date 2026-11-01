@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC example behaviour for the OS20 HVAC lab. Not control software. -->
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" name="BldcFanMotor" initial="stopped" datamodel="null">
+  <state id="stopped">
+    <transition event="cmd.low" target="low"/>
+    <transition event="cmd.high" target="high"/>
+  </state>
+  <state id="low">
+    <!-- about 600 rpm -->
+    <transition event="cmd.high" target="high"/>
+    <transition event="cmd.stop" target="stopped"/>
+    <transition event="rotor.locked" target="lockedRotor"/>
+  </state>
+  <state id="high">
+    <!-- about 1100 rpm -->
+    <transition event="cmd.low" target="low"/>
+    <transition event="cmd.stop" target="stopped"/>
+    <transition event="rotor.locked" target="lockedRotor"/>
+  </state>
+  <state id="lockedRotor">
+    <transition event="fault.reset" target="stopped"/>
+  </state>
+</scxml>
